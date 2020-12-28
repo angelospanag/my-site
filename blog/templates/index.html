@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Index</title>
 </head>
 <body>
+Posts
+
+{% for post in posts %}
+    <div>
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.body }}</p>
+        <a href="{% url 'blog:post_detail' post.pk %}">Link</a>
+    </div>
+{% endfor %}
 
 </body>
 </html>

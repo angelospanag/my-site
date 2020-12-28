@@ -1,10 +1,12 @@
 from django.urls import path
 
-from .views import contact, home
+from . import views
 
 app_name = 'blog'
 
 urlpatterns = [
-    path('', home),
-    path('contact/', contact)
+    path('', views.home),
+    path('about', views.about),
+    path('<int:pk>/', views.post_detail, name='post_detail'),
+    path('contact/', views.contact)
 ]
