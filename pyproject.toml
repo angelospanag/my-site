@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "mysite"
+version = "0.1.0"
+description = ""
+authors = ["Angelos Panagiotopoulos"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^3.1.4"
+django-ckeditor = "^6.0.0"
+python-dotenv = "^0.15.0"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.8.4"
+pep8-naming = "^0.11.1"
+autopep8 = "^1.5.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
