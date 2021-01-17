@@ -1,0 +1,82 @@
+#wrapper {
+    overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -11.6rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        height: auto;
+        padding: 15px;
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        /*height: auto;*/
+        /*min-width: 0;*/
+        /*width: 100%;*/
+    }
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+#sidebar-wrapper {
+    background-color: #03071e;
+}
+
+#navbar-links {
+    text-align: left;
+}
+
+#navbar-links > a {
+    background-color: #03071e;
+    color: aliceblue;
+    border-color: #71737a;
+    transition: all 0.3s ease;
+}
+
+#navbar-links > a {
+    color: aliceblue;
+}
+
+#navbar-links > a:hover {
+    background-color: #370617;
+    text-decoration: none;
+}
+
+#my-avatar {
+    text-align: center;
+    color: aliceblue;
+    padding-bottom: 20px;
+}
+
+#my-avatar > img {
+    border-radius: 50%;
+}
+
+#socials-container > a {
+    color: aliceblue;
+    transition: all 0.3s ease;
+}
+
+#socials-container > a:hover {
+    color: #370617;
+}

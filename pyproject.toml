@@ -6,8 +6,7 @@ authors = ["Angelos Panagiotopoulos"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-Django = "^3.1.4"
-django-ckeditor = "^6.0.0"
+Django = "^3.1.5"
 python-dotenv = "^0.15.0"
 
 [tool.poetry.dev-dependencies]
