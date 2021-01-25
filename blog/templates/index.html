@@ -8,16 +8,13 @@
         optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID
         which will toggle the menu when clicked.</p>
     {% for post in posts %}
-        <div>
-            <h1>{{ post.title }}</h1>
-            <a href="{% url 'blog:post_detail' post.pk %}">Link</a>
-        </div>
+        <h2>
+            <a href="{{ post.get_absolute_url }}">
+                {{ post.title }}
+            </a>
+        </h2>
+        <p class="date">
+            Published {{ post.publish }} by {{ post.author }}
+        </p>
     {% endfor %}
-    {% load flatpages %}
-    {% get_flatpages as flatpages %}
-    <ul>
-        {% for page in flatpages %}
-            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-        {% endfor %}
-    </ul>
 {% endblock content %}

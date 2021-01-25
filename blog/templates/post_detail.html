@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
-<div>
+
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %}
     <h1>{{ post.title }}</h1>
-    {{ post.body }}
-</div>
+    <p class="date">
+        Published {{ post.publish }} by {{ post.author }}
+    </p>
+    {{ post.body|safe }}
+{% endblock %}
