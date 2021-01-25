@@ -1,6 +1,6 @@
 jobs:
   build:
-    executor: python/3.9.1
+    executor: cimg/python:3.9.1
     steps:
       - checkout
       - python/install-packages:
