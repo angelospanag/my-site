@@ -10,7 +10,7 @@ jobs:
             poetry run pytest --version
           name: Test it
 orbs:
-  python: circleci/python@1.0.0
+  python: circleci/python@1.3.2
 version: 2.1
 workflows:
   main:
