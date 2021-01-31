@@ -88,6 +88,18 @@
     transition: all 0.3s ease;
 }
 
-#socials-container > a:hover {
-    color: #6a040f;
+#social-li:hover {
+    color: #0e76a8;
+}
+
+#social-gh:hover {
+    color: #8b949e;
+}
+
+#social-tw:hover {
+    color: #08a0e9;
+}
+
+#social-mail:hover {
+    color: #e6bd6a;
 }
