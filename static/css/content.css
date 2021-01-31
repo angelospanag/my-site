@@ -1,6 +1,13 @@
-#page-content-wrapper {
+#content {
     background-color: #370617;
     color: aliceblue;
+}
+
+#menuToggle {
+    background-color: #07113e;
+    color: aliceblue;
+    border-radius: 50px;
+    outline: none;
 }
 
 .role-logo {

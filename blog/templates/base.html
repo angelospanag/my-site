@@ -7,9 +7,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>{% block title %}{% endblock %}</title>
-
+    <script>
+        function toggleMenu() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.getElementById("content").classList.toggle("active");
+        }
+    </script>
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/simple-sidebar.css' %}" rel="stylesheet">
+    <link href="{% static 'css/sidebar.css' %}" rel="stylesheet">
     <link href="{% static 'css/content.css' %}" rel="stylesheet">
     <link href="{% static 'css/fontawesome.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/solid.min.css' %}" rel="stylesheet">
@@ -17,8 +22,8 @@
 </head>
 
 <body>
-<div class="d-flex" id="wrapper">
-    <div class="d-flex flex-column justify-content-around p-3" id="sidebar-wrapper">
+<div id="wrapper">
+    <nav class="d-flex flex-column justify-content-around p-3" id="sidebar">
         <div id="my-avatar">
             <img src="{% static 'images/me.jpg' %}" alt="Avatar" style="width:100px">
             <div id="my-title">
@@ -31,16 +36,21 @@
         <div id="navbar-links" class="list-group list-group-flush">
             <a class="list-group-item" href="{% url "blog:index" %}"><i class="fas fa-home m-2"></i>Blog</a>
             <a class="list-group-item" href="{% url "blog:about" %}"><i class="fas fa-user m-2"></i>About</a>
-            <a class="list-group-item" href="{% url "blog:contact" %}"><i class="fas fa-envelope m-2"></i>Contact</a>
+            <a class="list-group-item" href="{% url "blog:contact" %}"><i
+                    class="fas fa-envelope m-2"></i>Contact</a>
         </div>
         <div class="d-flex justify-content-around mt-auto" id="socials-container">
-            <a href="https://www.linkedin.com/in/angelos-panagiotopoulos-94524b4a"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/angelos-panagiotopoulos-94524b4a"><i
+                    class="fab fa-linkedin fa-2x"></i></a>
             <a href="https://github.com/angelospanag"><i class="fab fa-github fa-2x"></i></a>
             <a href="https://twitter.com/angelospanag"><i class="fab fa-twitter fa-2x"></i></a>
             <a href="mailto:angelospanag@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
         </div>
-    </div>
-    <div class="p-5" id="page-content-wrapper">
+    </nav>
+    <div class='p-4' id="content">
+        <button type="button" onclick="toggleMenu()" id="menuToggle" class="btn mb-2">
+            <i class="fas fa-bars"></i>
+        </button>
         {% block content %} {% endblock %}
     </div>
 </div>
