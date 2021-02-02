@@ -6,7 +6,7 @@ authors = ["Angelos Panagiotopoulos"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-Django = "^3.1.5"
+Django = "^3.1.6"
 python-dotenv = "^0.15.0"
 gunicorn = "^20.0.4"
 psycopg2-binary = "^2.8.6"

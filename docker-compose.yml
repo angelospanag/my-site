@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:13.1
+    restart: always
+    environment:
+      - POSTGRES_DB=mysite
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  web:
+    build: .
+#    entrypoint: ./docker-entrypoint.sh
+    command: gunicorn --bind 0.0.0.0:8000 mysite.wsgi
+    volumes:
+      - .:/mysite
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
