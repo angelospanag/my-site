@@ -1,4 +1,5 @@
-# My personal site
+# My personal site 
+[![angelospanag](https://circleci.com/gh/angelospanag/my-site.svg?style=svg)](https://app.circleci.com/pipelines/github/angelospanag/my-site)
 
 My personal site (under heavy development) currently hosted on: https://www.angelospanag.me
 
