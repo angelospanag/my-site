@@ -18,7 +18,7 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ALLOWED_HOSTS = ['127.0.0.1', os.getenv('REMOTE_HOST')]
+ALLOWED_HOSTS = ['127.0.0.1'] + os.getenv('REMOTE_HOST').split(',')
 
 DEBUG = os.getenv('DEBUG', True)
 SECRET_KEY = os.getenv('SECRET_KEY')
@@ -124,4 +124,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]

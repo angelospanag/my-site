@@ -1,43 +1,78 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <h1>Work Experience</h1>
 
+    <div class="about-section mb-3">
+        <h3>About me</h3>
+        <ul>
+            <li><h5> Favourite languages/tools for software development?</h5>
+                <p>
+                    Mainly Python and Go for backend development and React/Javascript (where its needed) for frontend
+                    development. Most recently I have been enjoying using Neo4J and D3.js for storing and representing
+                    graph datasets.
+                </p>
+                <p>
+                    If I had to pick my favourite, that would be Python. Amazingly readable and powerful syntax with a
+                    rich
+                    ecosystem of
+                    libraries encompassing web development, machine learning, data science and desktop development.
+                </p>
+            </li>
+            <li><h5>Other interests?</h5>
+                <p>
+                    I love listening to heavy metal and playing electric guitar, reading science-fiction and fantasy
+                    books, PC gaming and especially RPGs, exercising/running.
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="about-section mb-3">
+        <h3>About this site</h3>
+        <ul>
+            <li><h5>What did you use to make this?</h5>
+                <p>
+                    I started this blog from scratch using Python 3, Django 3 and Bootstrap with minimal JavaScript for
+                    its interface. It has been an awesome journey so far and I try to improve its looks and
+                    functionality from time to time, while updating its content.
+                </p>
+            </li>
+            <li>
+                <h5>Why not use a CMS like WordPress or a static site generator like Jekyll, Hugo, Gatsby or<i>
 
-    <div class="card role">
-        <a href="https://home.kpmg/uk/en/home.html">
-            <div class="card-horizontal">
-                <div class="img-square-wrapper">
-                    <img class="role-logo" src="{% static 'images/kpmg_logo.png' %}" alt="kpmg logo">
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">Senior Software Engineer</h4>
-                    <p class="card-text">KPMG UK</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="card role">
-        <div class="card-horizontal">
-            <div class="img-square-wrapper">
-                <img class="role-logo" src="{% static 'images/mediamath_logo.png' %}" alt="mediamath logo">
-            </div>
-            <div class="card-body">
-                <h4 class="card-title">Software Engineer</h4>
-                <p class="card-text">MediaMath</p>
-            </div>
-        </div>
-    </div>
-    <div class="card role">
-        <div class="card-horizontal">
-            <div class="img-square-wrapper">
-                <img class="role-logo" src="{% static 'images/sainsburys_logo.png' %}" alt="Card image cap">
-            </div>
-            <div class="card-body">
-                <h4 class="card-title">Software Engineer</h4>
-                <p class="card-text">Sainsbury's</p>
-            </div>
-        </div>
-    </div>
+                    ...insert x, y,
+                    z,
+                    Jamstack tool here...</i>?</h5>
+                <p>
+                    There is currently a very vibrant ecosystem of tools to generate a blogging site effortlessly and I
+                    fully
+                    support
+                    anyone who
+                    will choose to use one of the above. There has never been a more easier time to create your own blog
+                    with
+                    minimal effort and with no cost.
+                </p>
+                <p>
+                    I wanted to create this site from scratch so I can learn by doing, evolve it over time, have
+                    complete
+                    control
+                    over its content (maybe make some interactive posts in the future) and ...simply because it is fun
+                    to
+                    try!
+                </p>
 
+            </li>
+
+            <li><h5>Is the code for this site open-sourced?</h5>
+                <p>
+                    Yes! It is currently on <a href="https://github.com/angelospanag/my-site">GitHub</a>.
+                </p>
+                <p>
+                    Huge thanks to Antonio Melé and Packt publishing for creating an amazing book regarding Django
+                    development. If you are interested in creating a website in Django I highly recommend you to buy <a
+                        href="https://www.packtpub.com/product/django-3-by-example-third-edition/9781838981952">Django 3
+                    By Example - Third Edition</a>. Not affiliated in any way, just a happy customer.
+                </p>
+            </li>
+        </ul>
+    </div>
 {% endblock %}
