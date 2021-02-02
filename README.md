@@ -1,14 +1,14 @@
 # My personal site
 
-My personal site currently hosted on: https://www.angelospanag.me
+My personal site (under heavy development) currently hosted on: https://www.angelospanag.me
 
-## What did you use to make this?
+### What did you use to make this?
 
 I started this blog from scratch using Python 3, Django 3 and Bootstrap with minimal JavaScript for its interface. It
 has been an awesome journey so far and I try to improve its looks and functionality from time to time, while updating
 its content.
 
-## Why not use a CMS like WordPress or a static site generator like Jekyll, Hugo, Gatsby or ...insert x, y, z Jamstack tool here...?
+### Why not use a CMS like WordPress or a static site generator like Jekyll, Hugo, Gatsby or ...insert x, y, z Jamstack tool here...?
 
 There is currently a very vibrant ecosystem of tools to generate a blogging site effortlessly and I fully support anyone
 who will choose to use one of the above. There has never been a more easier time to create your own blog with minimal
