@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <h2 class="mb-4">Contact</h2>
     <form action="/contact/" method="post">
         {% csrf_token %}
-        {{ form.media }}
         {{ form.as_p }}
-        <input type="submit" value="Submit">
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 {% endblock %}

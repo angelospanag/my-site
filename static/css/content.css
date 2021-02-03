@@ -27,3 +27,8 @@
 .role:hover {
     background: #6a040f;
 }
+
+.btn-primary {
+    background-color: #07113e;
+    border-color: #07113e;
+}
