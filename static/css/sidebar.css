@@ -35,15 +35,19 @@
     #sidebar {
         margin-left: -250px;
     }
+
     #sidebar.active {
         margin-left: 0;
     }
+
     #content {
         width: 100%;
     }
+
     #content.active {
         width: calc(100% - 250px);
     }
+
     #sidebarCollapse span {
         display: none;
     }
@@ -88,18 +92,27 @@
     transition: all 0.3s ease;
 }
 
-#social-li:hover {
+#social-linkedin:hover {
     color: #0e76a8;
 }
 
-#social-gh:hover {
+#social-github:hover {
     color: #8b949e;
 }
 
-#social-tw:hover {
+#social-twitter:hover {
     color: #08a0e9;
 }
 
 #social-mail:hover {
     color: #e6bd6a;
+}
+
+#menu-toggle-area {
+    text-align: right;
+}
+
+#menuToggle {
+    position: relative;
+    left: 52px;
 }

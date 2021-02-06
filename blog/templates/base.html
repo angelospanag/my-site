@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>{% block title %}{% endblock %}</title>
+    <title>Angelos Panagiotopoulos</title>
     <script>
         function toggleMenu() {
             document.getElementById("sidebar").classList.toggle("active");
@@ -24,6 +24,11 @@
 <body>
 <div id="wrapper">
     <nav class="d-flex flex-column justify-content-around p-3" id="sidebar">
+        <div id="menu-toggle-area">
+            <button type="button" aria-label="Menu toggle" onclick="toggleMenu()" id="menuToggle" class="btn mb-2">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
         <div id="my-avatar">
             <img src="{% static 'images/me.jpg' %}" alt="Avatar" style="width:100px">
             <div id="my-title">
@@ -40,21 +45,18 @@
                     class="fas fa-envelope m-2"></i>Contact</a>
         </div>
         <div class="d-flex justify-content-around mt-auto" id="socials-container">
-            <a id="social-li" href="https://www.linkedin.com/in/angelos-panagiotopoulos-94524b4a" target="_blank"
+            <a id="social-linkedin" aria-label="my linkedin" href="https://www.linkedin.com/in/angelos-panagiotopoulos-94524b4a" target="_blank"
                rel="noopener noreferrer"><i
                     class="fab fa-linkedin fa-2x"></i></a>
-            <a id="social-gh" href="https://github.com/angelospanag" target="_blank" rel="noopener noreferrer"><i
+            <a id="social-github" aria-label="my github" href="https://github.com/angelospanag" target="_blank" rel="noopener noreferrer"><i
                     class="fab fa-github fa-2x"></i></a>
-            <a id='social-tw' href="https://twitter.com/angelospanag" target="_blank" rel="noopener noreferrer"><i
+            <a id='social-twitter' aria-label="my twitter" href="https://twitter.com/angelospanag" target="_blank" rel="noopener noreferrer"><i
                     class="fab fa-twitter fa-2x"></i></a>
-            <a id="social-mail" href="mailto:angelospanag@gmail.com" target="_blank" rel="noopener noreferrer"><i
+            <a id="social-mail" aria-label="my mail" href="mailto:angelospanag@gmail.com" target="_blank" rel="noopener noreferrer"><i
                     class="fas fa-envelope fa-2x"></i></a>
         </div>
     </nav>
-    <div class='p-4' id="content">
-        <button type="button" onclick="toggleMenu()" id="menuToggle" class="btn mb-2">
-            <i class="fas fa-bars"></i>
-        </button>
+    <div class='p-5' id="content">
         {% block content %} {% endblock %}
     </div>
 </div>
