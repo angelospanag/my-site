@@ -36,3 +36,21 @@
 #content > a {
     color: #07113e;
 }
+
+pre {
+    background-color: #1E1E20;
+    color: #b8a276;
+}
+
+code {
+    background-color: #1E1E20;
+    color: #b8a276;
+}
+
+a {
+    color: #4ea8de;
+}
+
+a:hover {
+    color: #4ea8de;
+}

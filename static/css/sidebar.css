@@ -11,7 +11,7 @@
     height: 100vh;
     z-index: 999;
     background-image: linear-gradient(180deg, #07113e, #03071e);
-    transition: all 0.3s;
+    transition: width, margin-left 0.3s;
 }
 
 #sidebar.active {
@@ -21,7 +21,7 @@
 #content {
     width: calc(100% - 250px);
     min-height: 100vh;
-    transition: all 0.3s;
+    transition: width 0.3s;
     position: absolute;
     top: 0;
     right: 0;
@@ -105,14 +105,16 @@
 }
 
 #social-mail:hover {
-    color: #e6bd6a;
+    color: #1e1e1f;
 }
 
 #menu-toggle-area {
     text-align: right;
+    height: 22px;
 }
 
 #menuToggle {
     position: relative;
-    left: 52px;
+    left: 60px;
+    top: 25px;
 }
