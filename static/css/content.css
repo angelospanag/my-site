@@ -33,10 +33,6 @@
     border-color: #07113e;
 }
 
-#content > a {
-    color: #07113e;
-}
-
 pre {
     background-color: #1E1E20;
     color: #b8a276;
@@ -53,4 +49,18 @@ a {
 
 a:hover {
     color: #4ea8de;
+}
+
+.post {
+    background: #350f1a;
+
+}
+
+.post > a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.post:hover {
+    background: #6a040f;
 }

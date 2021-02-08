@@ -2,9 +2,9 @@
 
 {% block title %}{{ post.title }}{% endblock %}
 {% block content %}
-    <h1>{{ post.title }}</h1>
-    <p class="date">
-        Published {{ post.publish }} by {{ post.author }}
-    </p>
+    <h2>{{ post.title }}</h2>
+    <h6 class="text-muted">
+        Published {{ post.publish | date:'Y-m-d' }}
+    </h6>
     {{ post.body|safe }}
 {% endblock %}
