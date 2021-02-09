@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Angelos Panagiotopoulos</title>
+    <title>{% block title %}{% endblock %}</title>
     <script>
         function toggleMenu() {
             document.getElementById("sidebar").classList.toggle("active");
@@ -45,14 +45,18 @@
                     class="fas fa-envelope m-2"></i>Contact</a>
         </div>
         <div class="d-flex justify-content-around mt-auto mb-5" id="socials-container">
-            <a id="social-linkedin" aria-label="my linkedin" href="https://www.linkedin.com/in/angelos-panagiotopoulos-94524b4a" target="_blank"
+            <a id="social-linkedin" aria-label="my linkedin"
+               href="https://www.linkedin.com/in/angelos-panagiotopoulos-94524b4a" target="_blank"
                rel="noopener noreferrer"><i
                     class="fab fa-linkedin fa-2x"></i></a>
-            <a id="social-github" aria-label="my github" href="https://github.com/angelospanag" target="_blank" rel="noopener noreferrer"><i
+            <a id="social-github" aria-label="my github" href="https://github.com/angelospanag" target="_blank"
+               rel="noopener noreferrer"><i
                     class="fab fa-github fa-2x"></i></a>
-            <a id='social-twitter' aria-label="my twitter" href="https://twitter.com/angelospanag" target="_blank" rel="noopener noreferrer"><i
+            <a id='social-twitter' aria-label="my twitter" href="https://twitter.com/angelospanag" target="_blank"
+               rel="noopener noreferrer"><i
                     class="fab fa-twitter fa-2x"></i></a>
-            <a id="social-mail" aria-label="my mail" href="mailto:angelospanag@gmail.com" target="_blank" rel="noopener noreferrer"><i
+            <a id="social-mail" aria-label="my mail" href="mailto:angelospanag@gmail.com" target="_blank"
+               rel="noopener noreferrer"><i
                     class="fas fa-envelope fa-2x"></i></a>
         </div>
     </nav>
