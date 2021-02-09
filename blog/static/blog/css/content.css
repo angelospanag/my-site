@@ -15,17 +15,9 @@
     height: 30px;
 }
 
-.role {
-    background: #350f1a;
-}
-
 .role > a {
     text-decoration: none;
     color: aliceblue;
-}
-
-.role:hover {
-    background: #6a040f;
 }
 
 .btn-primary {
@@ -51,16 +43,26 @@ a:hover {
     color: #4ea8de;
 }
 
-.post {
-    background: #350f1a;
-
-}
-
-.post > a {
-    text-decoration: none;
+.role,
+.post,
+.card-img-top,
+.card-body {
     color: aliceblue;
 }
 
+.card {
+    border: none;
+    background-color: #350f1a;
+}
+
+.card:hover,
+.role:hover,
 .post:hover {
     background: #6a040f;
+}
+
+.post > a,
+.certification{
+    text-decoration: none;
+    color: aliceblue;
 }

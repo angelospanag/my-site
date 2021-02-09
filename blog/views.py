@@ -29,6 +29,10 @@ def post_detail(request, year, month, day, post):
     return render(request, 'post_detail.html', {'post': post})
 
 
+def experience(request):
+    return render(request, 'experience.html', {})
+
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

@@ -11,5 +11,6 @@ urlpatterns = [
     path('<int:year>/<int:month>/<int:day>/<slug:post>/',
          views.post_detail,
          name='post_detail'),
+    path('experience/', views.experience, name='experience'),
     path('contact/', views.contact, name='contact')
 ]
