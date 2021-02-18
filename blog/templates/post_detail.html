@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block code_highlight %}
+{% if post.has_code_snippets %}
     <link rel="stylesheet" href="{% static 'blog/css/railscasts.css' %}">
     <script src="{% static 'blog/js/highlight.pack.js' %}"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+{% endif %}
 {% endblock %}
 {% block title %}{{ post.title }} / Angelos Panagiotopoulos{% endblock %}
 {% block content %}
