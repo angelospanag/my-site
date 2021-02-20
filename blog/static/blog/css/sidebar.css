@@ -87,24 +87,24 @@
     border-radius: 50%;
 }
 
-#socials-container > a {
+.socials-container > a {
     color: aliceblue;
     transition: all 0.3s ease;
 }
 
-#social-linkedin:hover {
+.social-linkedin:hover {
     color: #0e76a8;
 }
 
-#social-github:hover {
+.social-github:hover {
     color: #8b949e;
 }
 
-#social-twitter:hover {
+.social-twitter:hover {
     color: #08a0e9;
 }
 
-#social-mail:hover {
+.social-mail:hover {
     color: #f8da79;
 }
 

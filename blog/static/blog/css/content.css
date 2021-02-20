@@ -63,7 +63,24 @@ a:hover {
 }
 
 .post > a,
-.certification{
+.certification {
     text-decoration: none;
     color: aliceblue;
+}
+
+
+.social-linkedin:hover {
+    color: #0e76a8;
+}
+
+.social-github:hover {
+    color: #8b949e;
+}
+
+.social-twitter:hover {
+    color: #08a0e9;
+}
+
+.social-mail:hover {
+    color: #f8da79;
 }
