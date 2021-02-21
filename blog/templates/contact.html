@@ -2,7 +2,6 @@
 {% load static %}
 {% block title %}Contact / Angelos Panagiotopoulos{% endblock %}
 {% block content %}
-
     <div class="container">
         <h2 class="mb-4">Contact</h2>
         <div class="row">
@@ -40,16 +39,14 @@
                 <div class="dropdown-divider" style="background-color: aliceblue"></div>
                 <h6>Instant Messengers</h6>
                 <div class="p-1">
-                    Signal: <a href="https://signal.org/install"><img style="border-radius: 5px" src="{% static 'blog/images/signal_logo.png' %}"
-                                                                      width="40" height="40" alt="signal_logo"/></a>
+                    <span>Signal: </span><a href="https://signal.org/install">
+                    <img style="border-radius: 5px" src="{% static 'blog/images/signal_logo.png' %}" width="40"
+                         height="40" alt="signal_logo"/></a>
                 </div>
                 <div class="p-1">
-                    Wire:
-                    <a href="https://wire.com/en/download/"><img src="{% static 'blog/images/wire_logo.webp' %}"
-                                                                 width="40" height="40" alt="wire_logo"/></a>
+                    <span>Wire: </span><a href="https://wire.com/en/download/">
+                    <img src="{% static 'blog/images/wire_logo.webp' %}" width="40" height="40" alt="wire_logo"/></a>
                 </div>
-
-
             </div>
         </div>
     </div>
