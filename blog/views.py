@@ -39,7 +39,9 @@ def contact(request):
         if form.is_valid():
             form_data = form.cleaned_data
             send_mail(f'Personal site: {form_data["subject"]}',
-                      f'Name: {form_data["name"]}\nEmail address: {form_data["email_address"]}\n\n{form_data["message"]}',
+                      f'Name: {form_data["name"]}\n'
+                      f'Email address: {form_data["email_address"]}\n\n'
+                      f'{form_data["message"]}',
                       form_data['email_address'],
                       [EMAIL_HOST_USER])
             return HttpResponseRedirect('/thanks')
