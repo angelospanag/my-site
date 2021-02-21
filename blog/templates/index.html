@@ -1,14 +1,30 @@
 {% extends 'base.html' %}
 {% block title %}Blog / Angelos Panagiotopoulos{% endblock %}
 {% block content %}
-    {% for post in posts %}
-        <div class="card m-2 post">
-            <a href="{{ post.get_absolute_url }}">
-                <div class="card-body">
-                    <h5 class="card-title">{{ post.title }}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted"> Published {{ post.publish | date:'Y-m-d' }}</h6>
+    <style>
+        #rss-feed-link {
+            color: aliceblue;
+            text-decoration: none;
+        }
+        #rss-feed-link:hover {
+            background: #6a040f;
+        }
+    </style>
+    <div class="d-flex flex-column">
+        <div class="mb-5">
+            {% for post in posts %}
+                <div class="card m-2 post">
+                    <a href="{{ post.get_absolute_url }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ post.title }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted"> Published {{ post.publish | date:'Y-m-d' }}</h6>
+                        </div>
+                    </a>
                 </div>
-            </a>
+            {% endfor %}
         </div>
-    {% endfor %}
+        <div>
+            <a id="rss-feed-link" class="p-2" href="{% url "blog:post_feed" %}"><i class="fas fa-rss me-1"></i>RSS feed</a>
+        </div>
+    </div>
 {% endblock content %}
