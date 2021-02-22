@@ -93,7 +93,7 @@ python manage.py migrate
 ### Run application using development server
 
 ```bash
-python manage.py 
+python manage.py runserver
 ```
 
 ## Running in production
