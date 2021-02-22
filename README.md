@@ -64,6 +64,7 @@ poetry shell
 ```
 
 ### Environment variables
+Create a `.env` file at the root of the project with the following environment variables:
 
 ```dotenv
 DEBUG=True
