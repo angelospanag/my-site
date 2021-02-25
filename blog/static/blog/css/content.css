@@ -69,18 +69,18 @@ a:hover {
 }
 
 
-.social-linkedin:hover {
+.my-linkedin:hover {
     color: #0e76a8;
 }
 
-.social-github:hover {
+.my-github:hover {
     color: #8b949e;
 }
 
-.social-twitter:hover {
+.my-twitter:hover {
     color: #08a0e9;
 }
 
-.social-mail:hover {
+.my-email:hover {
     color: #f8da79;
 }
