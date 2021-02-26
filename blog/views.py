@@ -1,10 +1,13 @@
-from django.core.mail import send_mail
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
 from blog.forms import ContactForm
 from blog.models import Post
-from mysite.settings import EMAIL_HOST_USER
+from mysite.settings import EMAIL_HOST_USER, EMAIL_PORT, EMAIL_HOST_PASSWORD, EMAIL_HOST
 
 
 def home(request):
@@ -38,12 +41,19 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form_data = form.cleaned_data
-            send_mail(f'Personal site: {form_data["subject"]}',
-                      f'Name: {form_data["name"]}\n'
-                      f'Email address: {form_data["email_address"]}\n\n'
-                      f'{form_data["message"]}',
-                      form_data['email_address'],
-                      [EMAIL_HOST_USER])
+            msg = MIMEMultipart()
+            msg['From'] = EMAIL_HOST_USER
+            msg['To'] = EMAIL_HOST_USER
+            msg['Subject'] = f'Personal site: {form_data["subject"]}'
+            message = f'Name: {form_data["name"]}\n' \
+                      f'Email address: {form_data["email_address"]}\n\n' \
+                      f'{form_data["message"]}'
+            msg.attach(MIMEText(message))
+            with smtplib.SMTP(EMAIL_HOST, EMAIL_PORT) as server:
+                server.ehlo()
+                server.starttls()
+                server.login(EMAIL_HOST_USER, EMAIL_HOST_PASSWORD)
+                server.sendmail(EMAIL_HOST_USER, EMAIL_HOST_USER, msg.as_string())
             return HttpResponseRedirect('/thanks')
     else:
         form = ContactForm()
