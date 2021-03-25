@@ -11,7 +11,7 @@
                 <form action="/contact/" method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <div class="frc-captcha" data-sitekey={{ captcha_site_key }}></div>
+                    <div class="frc-captcha mb-2" data-sitekey={{ captcha_site_key }}></div>
                     <button type="submit" class="btn btn-primary">Send</button>
                 </form>
             </div>
