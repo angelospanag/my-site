@@ -1,0 +1,2 @@
+class FriendlyCaptchaException(Exception):
+    pass

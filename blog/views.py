@@ -7,7 +7,8 @@ from django.shortcuts import render, get_object_or_404
 
 from blog.forms import ContactForm
 from blog.models import Post
-from mysite.settings import EMAIL_HOST_USER, EMAIL_PORT, EMAIL_HOST_PASSWORD, EMAIL_HOST
+from blog.services.friendlycaptcha import verify_captcha_solution
+from mysite.settings import EMAIL_HOST_USER, EMAIL_PORT, EMAIL_HOST_PASSWORD, EMAIL_HOST, FRIENDLY_CAPTCHA_SITE_KEY
 
 
 def home(request):
@@ -41,6 +42,9 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form_data = form.cleaned_data
+            captcha_solution = request.POST.get('frc-captcha-solution', '')
+            if not verify_captcha_solution(captcha_solution):
+                return render(request, 'invalid_form_verification.html')
             msg = MIMEMultipart()
             msg['From'] = EMAIL_HOST_USER
             msg['To'] = EMAIL_HOST_USER
@@ -58,4 +62,4 @@ def contact(request):
     else:
         form = ContactForm()
 
-    return render(request, 'contact.html', {'form': form})
+    return render(request, 'contact.html', {'form': form, 'captcha_site_key': FRIENDLY_CAPTCHA_SITE_KEY})
